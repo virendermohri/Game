@@ -4,7 +4,6 @@ import { IoMdTrophy } from "react-icons/io";
 import { IoGameControllerOutline, IoGameController, IoTrophyOutline } from "react-icons/io5"
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
-import Dahboard from './Dahboard';
 const Navbar = () => {
     const location = useLocation();
 
@@ -40,7 +39,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 {/* <Dahboard/> */}
-                <div className="min-[630px]:hidden shadow-xl   pt-5 pb-5 bg-white w-[100%] grid grid-rows-1 grid-flow-col gap-0 fixed bottom-0 left-0">
+                <div className="min-[630px]:hidden shadow-xl   pt-5 pb-5 backdrop-blur w-[100%] grid grid-rows-1 grid-flow-col gap-0 fixed bottom-0 left-0">
                     <div className="guess   flex justify-center items-center ">
 
                         <Link to={"/Guess"}>

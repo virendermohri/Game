@@ -5,6 +5,8 @@ import Profile from "./components/Profile"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Recharge from "./components/Recharge";
 import History from "./components/History";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 function App() {
   const router = createBrowserRouter([
     {
@@ -26,6 +28,14 @@ function App() {
     {
       path: "/History",
       element:<><Navbar/> <History/></>
+    },
+    {
+      path: "/Login",
+      element:<><Navbar/> <Login/></>
+    },
+    {
+      path: "/Signup",
+      element:<><Navbar/> <Signup/></>
     },
   ])
   return (

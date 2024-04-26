@@ -4,29 +4,29 @@ import { LiaRupeeSignSolid } from "react-icons/lia";
 import { BsClockHistory } from "react-icons/bs";
 import { RiLockPasswordLine, RiBatteryChargeLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
-import { IoMdRefresh } from "react-icons/io";
 import Avtarboy4 from "../images/Avtarboy4.jpg"
 const Profile = () => {
   return (
-    <>
-      <div className='container mt-10  p-2 '>
+    <div className='flex flex-col mb-10  items-center justify-center'>
+      <div className='container mt-10 md:mt-0  p-2 '>
         <div className="flex flex-col   rounded-xl     p-4">
 
-          <div className=" mb-2 flex items-center justify-center ">
-            <img className='w-[30%]  rounded-full shadow-2xl' src={Avtarboy4} alt="nhh" />
+          <div className=" mb-2 md:mb-5  flex items-center justify-center ">
+            <img className='w-[30%] md:w-[10%]  rounded-full shadow-2xl' src={Avtarboy4} alt="nhh" />
           </div>
 
-          <div className="mb-2 ">
+          <div className="mb-2 md:mb-5 ">
             <p className='text-center font-bold text-xl italic'>~$~  Vishal  ~$~</p>
           </div>
-          <div className="">
-            <p className='text-center font-semibold'>Available Balance : 78788$</p>
+          <div className="flex  items-center justify-center">
+            <p className='text-center  font-semibold'>Available Balance : 78788 </p>
+            <LiaRupeeSignSolid className='font-semibold text-xl'/>
           </div>
 
         </div>
 
       </div>
-      <div className='container'>
+      <div className='container md:w-[70%]'>
         <div className="flex  mb-10 justify-around   flex-col  gap-2">
 
           <Link to={"/Recharge"}>
@@ -58,7 +58,7 @@ const Profile = () => {
           <button className='bg-slate-100 shadow hover:bg-slate-300  rounded pt-2 pb-2 pr-5 pl-5 btn'>Log out</button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

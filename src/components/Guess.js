@@ -1,10 +1,10 @@
 import React from 'react'
-import Dahboard from './Dahboard'
+import Dashboard from './Dashboard'
 
 const Guess = () => {
   return (
     <>
-    <Dahboard/>
+    <Dashboard/>
       guess
     </>
   )
