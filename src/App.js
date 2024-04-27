@@ -2,12 +2,35 @@ import Navbar from "./components/Navbar";
 import ColorGame from "./components/ColorGame"
 import Guess from "./components/Guess"
 import Profile from "./components/Profile"
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, useNavigate } from 'react-router-dom'
 import Recharge from "./components/Recharge";
 import History from "./components/History";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import { useState } from "react";
 function App() {
+  useState(async()=>{
+    if(!localStorage.getItem("token")){
+    }
+    else{
+      const response = await fetch(`${process.env.REACT_APP_HOST}/api/auth/getuser`, {
+        method: 'POST',
+        headers: {
+          'Content-type': "application/json",
+          "auth-token":localStorage.getItem("token")
+        },
+        
+      });
+      const json = await response.json()
+
+      if (json.success) {
+       
+        localStorage.setItem("user", JSON.stringify(json.user))
+      }
+     
+    }
+    
+  },[])
   const router = createBrowserRouter([
     {
       path: "/",
